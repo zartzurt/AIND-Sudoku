@@ -114,7 +114,7 @@ def hidden_locked_choices(values, tuple_size=None):
             if(len(g_list) == len(g_boxes)):
                 logging.debug('\t\tbefore elimination:%s' %
                               {box: values[box] for box in unit})
-                locked_choice = ''.join([g[0] for g in g_list])
+                locked_choice = ''.join(sorted([g[0] for g in g_list]))
                 digits_to_eliminate = str.maketrans('', '', locked_choice)
                 logging.debug('\t\tfound group_boxes:%s, locked_choice:%s' % (
                     g_boxes, locked_choice))
