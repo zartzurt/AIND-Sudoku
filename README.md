@@ -3,12 +3,12 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: If an unit has a pair of boxes with same posible value set of size two that means no other box in the unit can have those values. Applying this rule to every unit is going to eliminate solutions for each box. We keep iterating all the units till constraints can not reduce the number of solutions and we have to do a seach to find a solution.
+A: If an unit has a pair of boxes with same value set of size two that means no other box in the unit can have those values. Applying this rule to every unit with other constraints is going to reduce solutions for each box. We keep iterating all the units till constraints can not reduce the number of solutions then we have to do a seach to find a solution.
 
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: Diagonal constraints form a local unit of boxes just like row, column and box constraints. Each elimination rule should satisfy the same rules for this constraint just like every other unit.
+A: Diagonal constraints form a local unit just like row, column and square units. Each constraint strategy should eliminate values from the diagonal unit just like every other local unit.
 
 ### Install
 
